@@ -1,0 +1,38 @@
+/**{
+    align-content: center;
+}
+
+
+.NextDaysContainer{
+    //background-color: #000000;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+
+    & .dias_futuros {
+        height: 3.5rem;
+        width: 12rem;
+        background-color: aqua;
+        display: flex;
+        position: relative;
+        top: 0rem;
+        left: 0rem;
+        border-radius: 1rem;
+        align-items:flex-start;
+        align-content:flex-start;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.temp_dias_futuros{
+        height: 3.7rem;
+        width: 4rem;
+        background-color: rgb(218, 74, 7);
+        border-radius: 1rem;
+        display: flex;
+        position: relative;   
+        top: 0rem;
+        left: 6rem;
+    }
+*/

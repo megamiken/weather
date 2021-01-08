@@ -1,0 +1,643 @@
+$FondoTemp:#7D66F2;
+$CloudBackGround:#31338A;
+$BackGroundApp:#D7DEE6;
+$btn-bg-color:rgb(209, 182, 240);
+
+@import "./media-queries";
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+.App {
+  background-color:$BackGroundApp;
+  //width:100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;///agregar aqui el typefont
+  
+  & .logo {
+      //position: absolute;
+      
+      height: 2rem;
+      width: 2rem;
+      border-radius: 1rem;
+      background-image: url("./logo.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      left: 31rem;
+      //top: -0.8rem;
+
+      @include table {
+        left: 16rem;
+        top: -1.5rem;
+       
+      }
+  
+  }
+  
+}
+
+.App .main-box {
+  height:32rem;
+  width: 60rem;
+  background-color:white;
+  border-radius: 1rem;
+  //margin: 0rem auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  //top: 2rem;
+
+  @include table {
+    height: 52rem;
+    width: 34rem;
+    margin-bottom: 2rem;
+   
+  }
+
+  @include mobile {
+    height: 50rem;
+    width: 22rem;  
+    background-color: rgb(255, 255, 255);
+  }
+
+
+}
+
+.banner{
+  height:14rem;
+  width: 56rem;
+  background-image: url("./uno.jpg");
+  background-size: background-image ;
+  border-radius: 2rem;
+  position: relative;
+  top: 2rem;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  @include table {
+    height: 18rem;
+    width: 32rem; 
+  }
+  @include mobile{
+    height: 18rem;
+    width: 20rem; 
+  }
+
+}
+
+.cityPrin{
+  display:flex;
+  position:relative;
+  top: 3rem;
+  left: 8rem;
+  align-items: flex-end;
+
+  @include mobile{
+    top:1rem;
+    left: 4rem;
+  }
+  
+}
+
+.temp {
+  height:6rem;
+  width: 4rem;
+  background-color: $FondoTemp;
+  //border-top-left-radius: -1rem;
+  border-top-right-radius: 1.2rem;
+  //border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1.2rem;
+
+  display: flex;
+  position: relative;
+  right: 28rem;
+  bottom: 12rem;
+
+  @include table {
+    right: 14rem;
+    bottom: 16rem;
+  }
+  @include mobile{
+    top:-14.5rem;
+    right: 9rem;
+  }
+}
+.h2tb{
+
+  position: relative;
+  font-size: 1em;
+  top: 3rem;
+  left: 0.4rem;
+  
+}
+
+
+.cloud-container {
+  height:4rem;
+  width: 4rem;
+  background-color: $CloudBackGround;
+  //border-top-left-radius: -1rem;
+  border-top-right-radius: 1.2rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 1.2rem;
+  position: relative;
+  right: 28rem;
+  bottom: 9.5rem;
+  z-index: 10;
+
+  @include table {
+    right: 14rem;
+    bottom: 13.5rem;
+  }
+  @include mobile{
+    top:-12rem;
+    right: 9rem;
+  }
+}
+
+
+.bottom-container {
+  height:2rem;
+  width: 50rem;
+  //display:inline-flex;
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  position: relative;
+  //background-color: #000;
+  top: -4rem;
+  right: 2rem;
+  
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  @include table {
+    display: static;
+    grid-template-columns: 1fr;
+    left: 14rem;
+    top: 4rem;
+  }
+
+  @include mobile {
+    display: static;
+    grid-template-columns: 1fr;
+    left: 8rem;
+    top: 14rem;
+  }
+}
+
+
+.bottom-container .rectangulo {
+  height:14rem;
+  width: 12rem;
+  //background-color: $CloudBackGround;
+  margin: 0rem;
+  //margin-left: 50px;
+  //margin-right: 50px;        
+  position: relative;
+  display: flex;
+  top: 2rem;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+
+  @include table {
+    margin: 0.2rem;
+    height:6.5rem;
+    width: 32rem;
+    top: 1rem;
+    right: 5rem; 
+  }
+}
+
+//__________________ Next Days no se porque no puedo simplemente importarlo
+
+.forecast_title{
+ 
+  
+  font-size: x-large;
+  text-align: center;
+  @include mobile{
+    border-radius: 0.2rem;
+    display: flex;
+    position: relative;
+    top:-17.4rem ;
+    right: 1rem;
+  }
+
+}
+
+.NextDaysContainer{
+  display:absolute;
+  position: relative;
+  justify-content: center;
+  justify-content: center;
+  text-align: center;
+  top: 0.4rem;
+
+  //background-color: rgb(175, 13, 13);
+
+  @include table{
+    height: 3.5rem;
+    width: 6rem;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    left: -1.4rem;
+  }
+
+  @include mobile {
+    height: 3.5rem;
+    width: 6rem;
+    display:grid;
+    //position: relative;
+    grid-template-columns: 1fr;
+    top: -18rem;
+
+  }
+
+  & .dias_futuros {
+      height: 3.6rem;
+      width: 12.6rem;
+      background-color: rgb(82, 131, 223);
+      border-radius: 1rem;
+      margin-bottom: 0.4rem;
+      
+      @include table{
+        width: 10rem;
+        margin: 0.5rem;
+        //float: center;
+        display: grid;
+        grid-template-columns: 1fr 1rf 1rf;
+        position:relative;
+        left: 1.5rem;   
+      }
+
+      @include mobile{
+        width: 8rem;
+        margin: 1rem;
+        display: grid;
+        grid-template-columns: 1fr ;
+        position:relative;
+        left: 0.8rem;   
+      }
+  }
+
+  & .letra{
+   
+    //background-color: rgb(68, 26, 26);
+    display:inline-flex;
+    grid-template-columns: 1fr 1fr;
+    position:absolute;
+    right: 4.2rem;
+    
+    font-size: small;
+    margin-left: 0.1rem;
+    margin-top:0.1rem;
+    @include table{
+      
+      display:flex;
+      grid-template-columns: 1fr r;
+      position:relative;
+      //background-color: #000000;
+      top: 0rem;
+      left: 0rem;
+    }
+    
+
+    
+  }
+
+  & .temp_dias_futuros{
+      height: 3.5rem;
+      width: 4rem;
+      border-radius: 1rem;
+      position:static;   
+      float: right;
+      background:blue;
+
+      @include table{
+        position: relative;
+        height: 2.5rem;  
+        width: 5rem;
+        left: 1rem;
+      }
+      
+  }
+
+
+}
+
+ .temp_dias_futuros .temp_forecast{
+  font-size: large;
+  margin-top: 0.6rem;
+}
+
+
+////------------------ PLACE TO VISIT
+
+.Place_visitContainer{
+
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  top: 0rem;
+  @include table{
+    top: 8rem;
+    text-align: left;
+  }
+
+  @include mobile{
+    top: 0rem;
+    left: 0.4rem;
+    text-align: center;
+  }
+
+  & .placeto_visit_img {
+      height: 12rem;
+      width: 10rem;
+      background-image: url("./museo.png");
+      background-size: background-image ;
+      background-position:center;
+      background-repeat: no-repeat;
+      background-color: #d10b0b;
+      border-radius: 1rem;
+      display: flex;
+      position: relative;
+
+      @include table{
+        height: 14rem;
+        width: 10rem;
+        text-align: center;
+        position: relative;
+        right: 11.4rem;
+        z-index: 20;
+      }
+      @include mobile{
+        height: 14rem;
+        width: 10rem;
+        text-align: center;
+        position: relative;
+        right: 0rem;
+        top: 1rem;
+        z-index: 20;
+      }
+  
+  }
+}
+
+
+///////-------------------------- TOP REVIEWS
+.TopReviews_Container{
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  top: 0.8rem;
+
+  @include table{
+    z-index: 30;
+    top: 2.2rem;
+  }
+
+  @include mobile{
+    z-index: 30;
+    top: -8rem;
+    left: 11rem;
+  }
+
+  & .top-reviews{
+      height: 2rem;
+      width: 10rem;
+      background-image: url("./topreviews.png");
+      background-size: background-image ;
+      background-position:right;
+      background-repeat: no-repeat;
+      display: flex;
+      position: relative;
+      bottom: 1rem;
+      left: 0rem;
+      border-radius: 0.5rem;
+      margin-bottom: 0.5rem;
+}
+
+& .mid-review {
+  height: 3rem;
+  width: 10rem;
+  background-image: url("./moserrate.png");
+  background-size: background-image ;
+  background-position:bottom;
+  display: flex;
+  position: relative;
+  bottom: 0.5rem;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+& .bottom-review {
+  height: 7rem;
+  width: 10rem;
+  //background-color: rgb(236, 4, 224);
+  background-image: url("./jaimed.png");
+  background-size: background-image ;
+  background-position:center;
+  
+  display: flex;
+  position: relative;
+  bottom: 0.3rem;
+  left: 0rem;
+  border-radius: 2rem;
+  margin-bottom: 0.5rem;
+
+  & .btn-add-jd {
+    height: 5rem;
+    //width: 1remp;
+    background-color: #d10b0b;
+    &:hover{
+      background-color: lighten(#d10b0b, $amount: 20);
+    }
+    z-index: 40;
+    border-radius: 2rem;
+    padding: 1rem;
+    justify-content: center;
+    
+  }
+}
+
+}
+
+ 
+
+////------------------ PLACE TO VISIT
+.france_Container{
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  top: 1.4rem;
+
+  @include table{
+    z-index: 30;
+    top: -31.2rem;
+    left: 9.2rem;
+  }
+
+  @include mobile{
+    z-index: 30;
+    top: -31.2rem;
+    left: 9.8rem;
+  }
+
+    & .top-c{
+        height: 5rem;
+        width: 12rem;
+        background-color:rgb(245, 236, 230);
+        display: flex;
+        position: relative;
+        bottom: 3rem;
+        left: 0rem;
+        border-radius: 1rem;
+        margin-bottom: 0.5rem;
+  }
+
+      & .mid {
+        height: 5rem;
+        width: 12rem;
+        background-color: rgb(245, 236, 230);
+        display: flex;
+        position: relative;
+        bottom: 3rem;
+        left: 0rem;
+        border-radius: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      & .bottom-c {
+        height: 7rem;
+        width: 12rem;
+        //background-color: rgb(236, 97, 4);
+        background-image: url("./location.png");
+        background-size: background-image ;
+        background-repeat: no-repeat;
+
+        display: flex;
+        position: relative;
+        bottom: 3rem;
+        left: 0rem;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+
+      }
+
+      & .location-btn {
+        height: 2rem;
+        width: 10rem;
+        border-radius: 3rem;
+        margin: 1rem;
+        background-color:$btn-bg-color;
+        &:hover{
+          background-color: lighten($btn-bg-color, $amount: 20);
+        }
+        border:none;
+        font-size: large;
+      }
+      
+
+}
+
+
+
+
+//-------------------------- FRANCE
+//-------------------------- LYON
+
+.half_top_lyon {
+  height: 3.6rem;
+  width: 12rem;
+  position:relative;
+
+ 
+  & .lyon_icon{
+    height: 3.6rem;
+    width: 4rem;
+    float: left; 
+    background-color: #b5a6ff;  
+    border-radius: 1rem;
+  }
+
+  & .lyon_temp{
+    height: 3.6rem;
+    width: 4rem;
+    display:inline-block;
+    margin-top: 1rem;
+  }
+
+  & .lyon_name{
+    height: 3.6rem;
+    width: 4rem;
+    float: right;   
+  }
+  
+}
+.h4lyon{
+  color: #000000;
+  margin-top: 0.6rem;
+  font-size: large;
+}
+
+
+
+.half_bottom_lyon {
+  height: 1.4rem;
+  width: 12rem;
+  display:inline-flex;
+  bottom: 0.6rem;
+ 
+  position: relative;
+  z-index: 30;
+  & .lyon_h{
+    height: 1.4rem;
+    width: 5rem;
+    //background-color: #2c0a9b;
+    //float: left;
+ 
+  }
+
+  & .lyon_x {
+    height: 1.2rem;
+    width: 3.1rem;
+    //background-color: #910973;
+    
+    //display:grid;
+    //position: relative;  
+  }
+
+  & .lyon_v{
+    height: 1.4rem;
+    width: 3.4rem;
+    //background-color: #096b06;
+    //float: right; 
+  }
+
+}
+
+
+
+
+
+
